@@ -436,6 +436,7 @@ function commands()
 	print ("=hr for hard reset")
 	print ("=1tsjusthub for use my hub")
 	print ("=qk for queue kick")
+	print ("=slot1 / =slot2 / =slot3")
 
 
 end
@@ -713,6 +714,157 @@ function south()
 					centrals()
 				end
 			end)
+
+			function slot2()
+				local args = {
+					[1] = workspace.FriendlyNPCs:FindFirstChild("Character Slot Changer")
+				}
+				
+				game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatStart:FireServer(unpack(args))
+				wait(0.4)
+				local args = {
+					[1] = {
+						[1] = "Yes"
+					}
+				}
+				
+				game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatAdvance:FireServer(unpack(args))
+				wait(0.4)
+				local args = {
+					[1] = {
+						[1] = "k"
+					}
+				}
+				
+				game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatAdvance:FireServer(unpack(args))
+				wait(0.4)
+				local args = {
+					[1] = {
+						[1] = "Slot2"
+					}
+				}
+				
+				game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatAdvance:FireServer(unpack(args))
+				wait(0.4)
+				local args = {
+					[1] = {
+						[1] = "k"
+					}
+				}
+				
+				game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatAdvance:FireServer(unpack(args))
+				
+				
+					
+				end
+				
+				local Player = game.Players.LocalPlayer
+				Player.Chatted:connect(function(cht)
+					if cht:match("=slot2") then
+						slot2()
+					end
+				end)
+
+				function slot1()
+					local args = {
+						[1] = workspace.FriendlyNPCs:FindFirstChild("Character Slot Changer")
+					}
+					
+					game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatStart:FireServer(unpack(args))
+					wait(0.4)
+					local args = {
+						[1] = {
+							[1] = "Yes"
+						}
+					}
+					
+					game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatAdvance:FireServer(unpack(args))
+					wait(0.4)
+					local args = {
+						[1] = {
+							[1] = "k"
+						}
+					}
+					
+					game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatAdvance:FireServer(unpack(args))
+					wait(0.4)
+					local args = {
+						[1] = {
+							[1] = "Slot1"
+						}
+					}
+					
+					game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatAdvance:FireServer(unpack(args))
+					wait(0.4)
+					local args = {
+						[1] = {
+							[1] = "k"
+						}
+					}
+					
+					game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatAdvance:FireServer(unpack(args))
+					
+					
+						
+					end
+					
+					local Player = game.Players.LocalPlayer
+					Player.Chatted:connect(function(cht)
+						if cht:match("=slot1") then
+							slot1()
+						end
+					end)
+
+					function slot3()
+						local args = {
+							[1] = workspace.FriendlyNPCs:FindFirstChild("Character Slot Changer")
+						}
+						
+						game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatStart:FireServer(unpack(args))
+						wait(0.4)
+						local args = {
+							[1] = {
+								[1] = "Yes"
+							}
+						}
+						
+						game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatAdvance:FireServer(unpack(args))
+						wait(0.4)
+						local args = {
+							[1] = {
+								[1] = "k"
+							}
+						}
+						
+						game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatAdvance:FireServer(unpack(args))
+						wait(0.4)
+						local args = {
+							[1] = {
+								[1] = "Slot3"
+							}
+						}
+						
+						game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatAdvance:FireServer(unpack(args))
+						wait(0.4)
+						local args = {
+							[1] = {
+								[1] = "k"
+							}
+						}
+						
+						game:GetService("Players").LocalPlayer.Backpack.ServerTraits.ChatAdvance:FireServer(unpack(args))
+						
+						
+							
+						end
+						
+						local Player = game.Players.LocalPlayer
+						Player.Chatted:connect(function(cht)
+							if cht:match("=slot3") then
+								slot3()
+							end
+						end)
+
 
 
 
