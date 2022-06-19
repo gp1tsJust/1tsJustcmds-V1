@@ -261,14 +261,19 @@ Player.Chatted:connect(function(cht)
 end)
 
 function bonecrush()
-	local lplr = game.Players.LocalPlayer
-	lplr.Character["Bone Crush"].Activator.Crash:Destroy()
+	local mouse = game.Players.LocalPlayer:GetMouse()
+	mouse.KeyDown:connect(function(key)
+		if key == "v" then
+			local lplr = game.Players.LocalPlayer
+			lplr.Character["Bone Crush"].Activator.Crash:Destroy()
+		end
+	end)
 end
 
 function bonecrush2()
 	game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "1tsJustCmds";
-		Text = "BoneCrush Glitch";
+		Text = "Pressing V while bone crush equipped will";
 	})
 end
 local Player = game.Players.LocalPlayer
@@ -425,7 +430,13 @@ function commands()
 	print ("=zaros")
 	print ("=queue")
 	print ("=heaven")
+	print ("=south for tp south city")
+	print ("=west tp west city")
+	print ("=central tp central city")
 	print ("=hr for hard reset")
+	print ("=1tsjusthub for use my hub")
+	print ("=qk for queue kick")
+
 
 end
 
@@ -595,6 +606,113 @@ Player.Chatted:connect(function(cht)
 	end
 end)
 
+function myhub()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/gp1tsJust/1tsJustHub-V2-DBZ/main/README.md"), true))()
+	
+end
+
+local Player = game.Players.LocalPlayer
+Player.Chatted:connect(function(cht)
+	if cht:match("=1tsjusthub") then
+		myhub()
+	end
+end)
+
+function queue1()
+	local plr = game:GetService("Players").LocalPlayer
+	local mouse = plr:GetMouse()
+	local place = game.PlaceId
+	Character = game.Players.LocalPlayer
+	Players = game.Players.LocalPlayer.Character
+	MouseFunction = game:GetService("Players").LocalPlayer:GetMouse()
+
+
+	mouse.KeyDown:connect(function(key)
+
+		if key == "k" then
+			Players.Humanoid:EquipTool(Character.Backpack["Dragon Crush"])
+			Players["Dragon Crush"]:Activate()
+			game.Workspace.Live[Character.Name]["Dragon Crush"].Activator["Flip"]:Destroy()
+			
+			wait (0.2)
+			
+			game.Workspace["Wormhole"].TouchInterest:Destroy()
+			
+			wait(2)
+			
+			game:GetService("TweenService"):Create(
+           game.Players.LocalPlayer.Character.HumanoidRootPart,
+           TweenInfo.new(1.2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out),
+           {CFrame = CFrame.new(2656.7854, 3946.00439, -2515.78467, 0.969526529, 0, -0.244986445, -0, 1, -0, 0.244986445, 0, 0.969526529)}
+           ):Play()
+            
+            
+            
+
+		end
+	end)
+end 
+function queue2()
+game:GetService("StarterGui"):SetCore("SendNotification", {
+Title = "1tsJustCmds";
+Text = "Queue Kick Press K";
+})
+end
+local Player = game.Players.LocalPlayer
+Player.Chatted:connect(function(cht)
+if cht:match("=qk") then
+queue2()
+queue1()
+end
+end)
+
+function south()
+	game:GetService("TweenService"):Create(
+		game.Players.LocalPlayer.Character.HumanoidRootPart,
+		TweenInfo.new(1.2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out),
+		{CFrame = CFrame.new(-456, 28, -6412)}
+		):Play()
+		
+	end
+	
+	local Player = game.Players.LocalPlayer
+	Player.Chatted:connect(function(cht)
+		if cht:match("=south") then
+			south()
+		end
+	end)
+
+	function west()
+		game:GetService("TweenService"):Create(
+			game.Players.LocalPlayer.Character.HumanoidRootPart,
+			TweenInfo.new(1.2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out),
+			{CFrame = CFrame.new(-570, 23, -2884)}
+			):Play()
+			
+		end
+		
+		local Player = game.Players.LocalPlayer
+		Player.Chatted:connect(function(cht)
+			if cht:match("=west") then
+				west()
+			end
+		end)
+
+		function centrals()
+			game:GetService("TweenService"):Create(
+				game.Players.LocalPlayer.Character.HumanoidRootPart,
+				TweenInfo.new(1.2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out),
+				{CFrame = CFrame.new(-3834, 23, -1428)}
+				):Play()
+				
+			end
+			
+			local Player = game.Players.LocalPlayer
+			Player.Chatted:connect(function(cht)
+				if cht:match("=central") then
+					centrals()
+				end
+			end)
 
 
 
