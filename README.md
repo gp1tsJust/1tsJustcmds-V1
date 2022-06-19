@@ -425,7 +425,7 @@ function commands()
 	print ("=zaros")
 	print ("=queue")
 	print ("=heaven")
---	print ("=")
+	print ("=hr for hard reset")
 
 end
 
@@ -577,6 +577,21 @@ end
 Player.Chatted:connect(function(cht)
 	if cht:match("=heaven") then
 		heaven()
+	end
+end)
+
+function hardreset()
+	local Player = game:GetService("Players").LocalPlayer
+	local Mouse = Player:GetMouse()
+	
+		   Player.Character.Humanoid.Health = 0
+	
+end
+
+local Player = game.Players.LocalPlayer
+Player.Chatted:connect(function(cht)
+	if cht:match("=hr") then
+		hardreset()
 	end
 end)
 
