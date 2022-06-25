@@ -439,6 +439,8 @@ function commands()
 	print ("=slot and select u the slot after")
 	print ("=afk for anti afk")
 	print ("=akick for anti kick")
+	print("=beerus / =ber for beerus animation")
+	print("=aglich for anti glich")
 
 
 end
@@ -812,6 +814,68 @@ ab.Text="Roblox Tried to kick you but we didnt let them kick you :D"wait(2)ab.Te
 								akick()
 							end
 						end)
+
+
+						function glic()
+							if not game:IsLoaded() then
+								game.Loaded:Wait()
+								end
+								
+								local plr = game.Players.LocalPlayer
+								
+								while wait() do
+									pcall(function()
+										game:GetService("Workspace").Live[plr.Name].LowerTorso.BodyVelocity:Destroy()
+									end)
+								end
+
+						end
+						
+						function glic2()
+							game:GetService("StarterGui"):SetCore("SendNotification", {
+								Title = "1tsJustCmds";
+								Text = "anti glich loaded";
+							})
+						end
+						local Player = game.Players.LocalPlayer
+						Player.Chatted:connect(function(cht)
+							if cht:match("=aglich") then
+								glic()
+								glic2()
+							end
+						end)
+
+
+						function beeru()
+							if not game:IsLoaded() then
+								game.Loaded:Wait()
+								end wait()
+								
+								player = game.Players.LocalPlayer while wait() do
+								if game.Workspace.Live[player.Name].Animate.idle:FindFirstChild("Animation1") then
+								game.Workspace.Live[player.Name].Animate.idle:FindFirstChild("Animation1").AnimationId = "rbxassetid://1171558651"
+								if game.Workspace.Live[player.Name].Animate.walk:FindFirstChild("RunAnim") then
+								game.Workspace.Live[player.Name].Animate.walk:FindFirstChild("RunAnim").AnimationId = "rbxassetid://1171558651"
+								end end end
+						end
+						
+						function beeru1()
+							game:GetService("StarterGui"):SetCore("SendNotification", {
+								Title = "1tsJustCmds";
+								Text = "Beerus Animation Loaded";
+							})
+						end
+						local Player = game.Players.LocalPlayer
+						Player.Chatted:connect(function(cht)
+							if cht:match("=beerus") or cht:match("=ber") then
+								beeru()
+								beeru1()
+							end
+						end)
+
+
+
+
 
 
 
