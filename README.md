@@ -31,6 +31,8 @@ function dc()
 		end
 	end)
 end 
+
+
 function dc2()
 game:GetService("StarterGui"):SetCore("SendNotification", {
 Title = "1tsJustCmds";
@@ -44,6 +46,44 @@ dc2()
 dc()
 end
 end)
+
+
+function dt()
+	local plr = game:GetService("Players").LocalPlayer
+	local mouse = plr:GetMouse()
+	local place = game.PlaceId
+	Character = game.Players.LocalPlayer
+	Players = game.Players.LocalPlayer.Character
+	MouseFunction = game:GetService("Players").LocalPlayer:GetMouse()
+
+
+	mouse.KeyDown:connect(function(key)
+
+		if key == "k" then
+			Players.Humanoid:EquipTool(Character.Backpack["Dragon Throw"])
+			Players["Dragon Throw"]:Activate()
+			game.Workspace.Live[Character.Name]["Dragon Throw"].Activator["Flip"]:Destroy()
+			wait()
+
+		end
+	end)
+end 
+function dt2()
+game:GetService("StarterGui"):SetCore("SendNotification", {
+Title = "1tsJustCmds";
+Text = "DragonThrow Glich Press K";
+})
+end
+local Player = game.Players.LocalPlayer
+Player.Chatted:connect(function(cht)
+if cht:match("=dt") or cht:match("=dragonthrow") then
+dt2()
+dt()
+end
+end)
+
+
+
 
 function noslow()
     (getgenv()).noslow = true;
@@ -407,8 +447,10 @@ Player.Chatted:connect(function(cht)
 end)
 
 function commands()
+	print ("-----------------------------------------new version(1.5)-----------------------------------------")
     print ("=freeze Press K")
-    print ("=dc Press K")
+    print ("=dc for dragoncrush glich (Press K)")
+	print ("=dt for dragonthrow glich (Press K)")
     print ("=rj for rejoin")
     print ("=gm (only earth)")
     print ("=rhalo for remove halo")
@@ -439,8 +481,8 @@ function commands()
 	print ("=slot and select u the slot after")
 	print ("=afk for anti afk")
 	print ("=akick for anti kick")
-	print("=beerus / =ber for beerus animation")
-	print("=aglich for anti glich")
+	print ("=beerus / =ber for beerus animation")
+	print ("=aglich for anti glich")
 
 
 end
@@ -872,7 +914,6 @@ ab.Text="Roblox Tried to kick you but we didnt let them kick you :D"wait(2)ab.Te
 								beeru1()
 							end
 						end)
-
 
 
 
