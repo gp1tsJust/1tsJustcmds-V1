@@ -10,6 +10,25 @@ game.StarterGui:SetCore("SendNotification", {
 		Duration = "15";
 		})
 
+wait(0.3)
+
+local args = {
+    [1] = "~1tsJustCmds~",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+wait(0.2)
+
+
+local args = {
+    [1] = "~Credits 1tsJustgp~",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
 
 function dc()
 	local plr = game:GetService("Players").LocalPlayer
@@ -914,7 +933,6 @@ ab.Text="Roblox Tried to kick you but we didnt let them kick you :D"wait(2)ab.Te
 								beeru1()
 							end
 						end)
-
 
 
 
