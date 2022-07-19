@@ -484,7 +484,7 @@ Player.Chatted:connect(function(cht)
 end)
 
 function commands()
-	print ("-----------------------------------------new version(1.5)-----------------------------------------")
+	print ("-----------------------------------------new version(1.6)-----------------------------------------")
     print ("=freeze Press K")
     print ("=dc for dragoncrush glich (Press K)")
 	print ("=dt for dragonthrow glich (Press K)")
