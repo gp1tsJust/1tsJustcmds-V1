@@ -319,6 +319,24 @@ Player.Chatted:connect(function(cht)
 	end
 end)
 
+
+function Tower1()
+    game:GetService("TweenService"):Create(
+           game.Players.LocalPlayer.Character.HumanoidRootPart,
+           TweenInfo.new(1.2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out),
+           {CFrame = CFrame.new(2071, 1495, -2279)}
+           ):Play()
+end
+
+local Player = game.Players.LocalPlayer
+Player.Chatted:connect(function(cht)
+	if cht:match("=tower") then
+		Tower1()
+	end
+end)
+
+
+
 function bonecrush()
 	local mouse = game.Players.LocalPlayer:GetMouse()
 	mouse.KeyDown:connect(function(key)
@@ -494,6 +512,7 @@ function commands()
 	print ("=south for tp south city")
 	print ("=west tp west city")
 	print ("=central tp central city")
+	print ("=tower for tp in tower")
 	print ("=hr for hard reset")
 	print ("=1tsjusthub for use my hub")
 	print ("=qk for queue kick")
